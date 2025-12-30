@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools & Technologies Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>AI Tools & Technologies</h1>
+            <p class="subtitle">Track your journey through the AI landscape</p>
+        </header>
+
+        <div class="stats-bar" id="statsBar">
+            <!-- Injected via JS -->
+        </div>
+
+        <div class="controls">
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" id="searchInput"
+                    placeholder="Search tools (e.g., 'Generic', 'Claude', 'React')">
+            </div>
+
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="heard">Heard</button>
+                <button class="filter-btn" data-filter="used">Used</button>
+                <button class="filter-btn" data-filter="expert">Expert</button>
+            </div>
+
+            <button class="btn-add" id="btnAdd">
+                <span>+</span> Add New Tool
+            </button>
+        </div>
+
+        <div class="glass-panel">
+            <table class="tool-table">
+                <thead>
+                    <tr>
+                        <th class="col-name">Tool Name</th>
+                        <th class="col-status">
+                            <div class="status-headers">
+                                <span class="status-header-item">Heard</span>
+                                <span class="status-header-item">Used</span>
+                                <span class="status-header-item">Expert</span>
+                            </div>
+                        </th>
+                        <th style="width: 10%;"></th> <!-- Actions -->
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Rows injected via JS -->
+                </tbody>
+            </table>
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <span class="empty-icon">🔭</span>
+                <p>No tools found matching your criteria</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
